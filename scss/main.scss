@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
+$font-stack:    'Roboto Mono', monospace;
+$primary-color: #4373A9;
+$note-color: #FFFFA5;
+$note-text: #201f1f;
+
+body {
+	background-color: $primary-color;
+	font-family: $font-stack;
+	color: white;
+}
+
+header {
+	text-align: center;
+	text-decoration: underline;
+}
+
+h1 {
+	font-weight: normal;
+	margin-bottom: .5em;
+}
+
+#note-holder {
+	width: 90%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	justify-content: space-around;
+}
+
+.note {
+	background-color: $note-color;
+	color: $note-text;
+	flex-basis: 28%;
+	margin: .5em .5em;
+	padding: .5em;
+	flex-shrink: 0;
+	flex-grow: 1;
+	min-width: 250px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	p {
+		margin-top: 0;
+		margin-bottom: .5em;
+	}
+
+	button {
+		background-color: white;
+		color: red;
+		font-weight: bold;
+		align-self: flex-end;
+	}
+}
+
