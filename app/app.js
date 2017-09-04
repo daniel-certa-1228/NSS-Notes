@@ -11,6 +11,12 @@ app.config(($routeProvider) => {
 	});
 });
 
+app.filter('reverse', function() {
+  return function(notes) {
+    return notes.slice().reverse();
+  };
+});
+
 app.run(($location, FBCreds) => {
 	let creds = FBCreds;
 	let authConfig = {
