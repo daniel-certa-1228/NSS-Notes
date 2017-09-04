@@ -1,7 +1,7 @@
 "use strict";
 console.log( "all-notes-contr.js" );
 
-app.controller("NoteControl", function($scope, NoteFactory) {
+app.controller("NoteControl", function($scope, NoteFactory, $location) {
 
 	$scope.notes = [];
 
