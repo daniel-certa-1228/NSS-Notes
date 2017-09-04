@@ -1,0 +1,10 @@
+<article ng-repeat="note in notes" class="note">
+	<section>
+		<div class="note-area">
+			<p>{{note.note}}</p>
+		</div>
+	</section>
+	<section>
+		<button ng-click="deleteNote(note.id)" class="delete-button">Delete Note</button>
+	</section>
+</article>

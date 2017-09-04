@@ -20,6 +20,7 @@ Configure your application to support the following routes.
 /notes
 /new
 Write a controller for each of the partials
+
 New Note Form
 
 Display a text field labeled Enter note: and a button labeled Save. When the button is clicked, save a new item in the Firebase notes collection, along with the current user's unique id.

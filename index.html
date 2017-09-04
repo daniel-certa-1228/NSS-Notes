@@ -6,13 +6,19 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 	</head>
-	<body>
-		<header>
+	<body ng-app="NotesApp">
+		<header class="header">
 			<h1>NSS Notes</h1>
+			<ul class="links">
+				<li><a ng-href="#">View Notes</a></li>
+				<li><a ng-href="#">New Note</a></li>
+				<li><a ng-href="#">Login</a></li>
+				<li><a ng-href="#">Register</a></li>
+			</ul>
 		</header>
 
-		<div id="note-holder">
-		<article class="note">
+		<div id="note-holder" ng-view>
+		<!-- <article class="note">
 			<section>
 				<div class="note-area">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -41,11 +47,18 @@
 			<section>
 				<button class="delete-button">Delete Note</button>
 			</section>
-		</article>
+		</article> -->
 			
-		</div>
-
+		</div>  <!--END NOTE HOLDER-->
+		
+		<!--SCRIPT TAGS -->
+		<script type="text/javascript" src="./lib/node_modules/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="./lib/node_modules/angular/angular.min.js"></script>
+    	<script type="text/javascript" src="./lib/node_modules/angular-route/angular-route.min.js"></script>
+    	<script type="text/javascript" src="./lib/node_modules/firebase/firebase.js"></script>
 		<script type="text/javascript" src="app/app.js"></script>
 		<script type="text/javascript" src="app/factories/note-factory.js"></script>
+		<script type="text/javascript" src="app/controllers/all-notes-contr.js"></script>
+		<script type="text/javascript" src="app/values/fb-creds.js"></script>
 	</body>
 	</html>
