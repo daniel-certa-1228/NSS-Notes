@@ -15,12 +15,14 @@ app.config(($routeProvider) => {
 	});
 });
 
+// reversing the array to display newest notes first
 app.filter('reverse', function() {
   return function(notes) {
     return notes.slice().reverse();
   };
 });
 
+// initialize firebase with my creds
 app.run(($location, FBCreds) => {
 	let creds = FBCreds;
 	let authConfig = {

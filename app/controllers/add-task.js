@@ -15,5 +15,10 @@ app.controller("AddControl", function($scope, NoteFactory, $location){
 		});
 	};
 
+// create a function for cancel button to go to home view
+	$scope.page = (path) => {
+		$location.path(path);
+	};
+
 });
 
