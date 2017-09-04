@@ -23,6 +23,21 @@ app.factory("NoteFactory", function($q, $http, FBCreds) {
 		});
 	};
 
+	const addNewNote = (obj) => {
+		let newNote = JSON.stringify(obj);
+		return $q((resolve, reject) => {
+			$http.post(`${FBCreds.databaseURL}/notes.json`, newNote)
+			.then((data) => {
+				console.log( "data", data );
+				resolve(data);
+			})
+			.catch((error) => {
+				console.log( "error", error );
+				reject(error);
+			});
+		});
+	};
+
 	const deleteNote = (id) => {
 		return $q((resolve, reject) => {
 			$http.delete(`${FBCreds.databaseURL}/notes/${id}.json`)
@@ -36,5 +51,5 @@ app.factory("NoteFactory", function($q, $http, FBCreds) {
 			});
 		});
 	};
-	return {getAllNotes, deleteNote};
+	return {getAllNotes, deleteNote, addNewNote};
 });

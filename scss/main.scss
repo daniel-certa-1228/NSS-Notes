@@ -96,5 +96,62 @@ h1 {
 	}
 }
 
+.add-note-view {
+	background-color: black;
+	width: 60%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-content: center;
+	padding: 1em;
+	border-radius: 20px;
+	// text-align: center;
+	h2 {
+		margin: 0 auto .5em;;
+	}
+
+	textarea {
+		width: 94%;
+		height: 200px;
+		background-color: $note-color;
+		font-size: 1em;
+		margin: 0 auto;
+	}
+
+	.SaveBtn {
+		background-color: red;
+		color: white;
+		font-weight: bold;
+		align-self: flex-end;
+		padding:.25em;
+		font-size: 1em;
+		margin: 1em 1em 0 1em;
+	}
+
+	.SaveBtn:hover {
+		background-color: white;
+		color: red;
+	}
+
+
+
+	.CancelBtn {
+		background-color: grey;
+		color: white;
+		font-weight: bold;
+		align-self: flex-end;
+		padding:.25em;
+		font-size: 1em;
+		margin-top: .5em;
+		margin-right: 1em;
+	}
+
+	.CancelBtn:hover {
+		background-color: white;
+		color: grey;
+	}
+}
+
 
 

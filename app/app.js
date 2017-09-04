@@ -8,6 +8,10 @@ app.config(($routeProvider) => {
 	.when('/', {
 		templateUrl: 'partials/note-list.html',
 		controller: 'NoteControl'
+	})
+	.when('/new-note' ,{
+		templateUrl: 'partials/new-note.html',
+		controller: 'AddControl'
 	});
 });
 
