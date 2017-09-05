@@ -1,5 +1,5 @@
 "use strict";
-console.log( "add-task.js" );
+console.log( "add-note.js" );
 
 app.controller("AddControl", function($scope, NoteFactory, $location){
 
