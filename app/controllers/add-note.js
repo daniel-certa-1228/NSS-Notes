@@ -1,5 +1,5 @@
 "use strict";
-console.log( "add-task.js" );
+console.log( "add-note.js" );
 
 app.controller("AddControl", function($scope, NoteFactory, $location){
 
@@ -13,6 +13,11 @@ app.controller("AddControl", function($scope, NoteFactory, $location){
 		.then((data) => {
 			$location.url("/");
 		});
+	};
+
+// create a function for cancel button to go to home view
+	$scope.page = (path) => {
+		$location.path(path);
 	};
 
 });
